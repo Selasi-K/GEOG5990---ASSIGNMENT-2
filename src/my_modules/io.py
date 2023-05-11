@@ -22,7 +22,6 @@ def read_data(filepath):
         row = []
         for value in line:
             row.append(value)
-            #print(value)
         data.append(row)
     f.close()
     #print(data)  
@@ -30,30 +29,28 @@ def read_data(filepath):
 #Checking that each row of data contains the same number of values, and returning the num of rows and columns
   #Checking number of rows and columns
     n_rows = len(data)
-    #print('n_rows',n_rows)
     n_cols0 = len(data[0])
-   # print('n_cols',n_cols0)
    #Checking if there equal number of rows and columns and printing the num 
     for row in range(1,n_rows):
         n_cols = len(data[row])
         if n_cols != n_cols0:
             print("Warning")
-        #print data
         return data, n_rows, n_cols
         f.close()
-        #print(data)
 
-def write_data(filepath,rescaled_raster):
+
+def write_data(filepath, rescaled_raster):
     """
   A function that writes a two-dimensional list of floats to a CSV file.
-
+  
   Parameters:
-  rescaled_raster (list): a two-dimensional list of floats representing the rescaled weighted raster data.
+   filepath (str): The file path to save the CSV file.
+  rescaled_raster (list): a two-dimensional list of floats representing the rescaled weighted raster data (final output).
 
   Returns:
   None
   """
-    
+    # Open a CSV file with the given file path and write the data from the rescaled raster to it
     with open(filepath,'w', newline='') as f:
         writer=csv.writer(f, delimiter=',')
         for row in rescaled_raster:

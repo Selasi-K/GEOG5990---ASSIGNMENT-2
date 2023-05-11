@@ -1,5 +1,3 @@
-#Importing packages
-import math
 
 def weighting_rasters(gw,pw,tw,n_rows, n_cols, geology, population, transport):
     """
