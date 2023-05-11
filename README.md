@@ -1,7 +1,9 @@
-# GEOG5990---ASSIGNMENT-2
+# GEOG5990---ASSIGNMENT-2 (201578105)
 
 #PROJECT TITLE
+
 MULTICRITERIA EVALUATION (MCE) SUITABILITY ANALYSIS SOFTWARE FOR ROCK AGGREGATE PRODUCTION IN THE UNITED KINGDOM
+
 
 #DESCRIPTION 
 The MCE Software is an interactive software, built using python, targeted at aiding analysis for suitability of land for rock aggregate production in 
@@ -20,7 +22,8 @@ Spyder v3.9 was used in building the software.
 #GETTING STARTED
 License - Apache 2.0. Attached is a licence file with more information. Alternatively, visit this link for details: https://www.apache.org/licenses/LICENSE-2.0
 
-##CONTENT FILES (File Directory)
+#CONTENT FILES (File Directory)
+
 data/input  - contains geology.txt, population.txt and transport.txt files which are the 3 raster data read by the program.
     /output - contains all output files from the program. This includes both text and image files.
 
@@ -49,7 +52,7 @@ https://www.spyder-ide.org/
 Additionally, the website offers basic training on getting started with the program. Consider using this resource to familiarize yourself with the program.
 
 
-#USAGE 
+#USAGE
 After successfully installing Spyder, launch it. (For help with lauching the program, see the word document).
 The Spyder interface has three windows(Editor,Help viewer and ipython console). The Editor window (left side) displays scripts opened and codes.
 It is where most of the code for the MCE software was written. Help viewer section(top-right) has useful tools including variable explorer, plots and a Help section.
@@ -57,12 +60,13 @@ Lastly, the ipython console displayed print outputs and errors. It also allows s
 Additionally, there are some useful resources in the word document.
 
 #DEVELOPMENT PROCESS
+
 1. Text files of the input rasters (geology.txt, population.txt and transport.txt) were read as list of lists using a generic read data function which reads the files
 using csv.reader and checks the number of rows and coloums of each of them when called and fed with a filepath(read_data function).
-2.The three rasters were multiplied by different weights and summed up to produce a weighted sum list  using weighting_rasters_function.
-3.The weighted sum values were further rescaled to fall within 0 - 255 after deriving the minimum and maximum values.
+2. The three rasters were multiplied by different weights and summed up to produce a weighted sum list  using weighting_rasters_function.
+3. The weighted sum values were further rescaled to fall within 0 - 255 after deriving the minimum and maximum values.
 4. A GUI was created to display the results, to allow users to change the weights and save outputs using tkinter, plot and update functions.
-5. The program was run a series of time to test it's functionality and fix errors. This is evidenced by sample results found in the output folder. Unit testing was also done.
+5. The program was ran a series of time to test it's functionality and fix errors. This is evidenced by sample results found in the output folder. Unit testing was also done.
 
 #RUNNING THE PROGRAM
 NB: Before running the program it is imperactive to change the Graphics Backend option to Tkinter. This ensures the GUI codes work well. See word document on steps to do this.
@@ -76,22 +80,23 @@ Click the run button to run the program.
 
 When the the script is run the GUI window opens displaying the three rasters, sliders and buttons to save final output (See screenshots in the word document). From the GUI window,follow these steps to conduct MCE analysis:
 
-1.In the left bottom area of the GUI window (frame 4), there are adjustable sliders which control the weights used in weighting the input rasters. Adjust the weights according to your preference. Doing this automatically updates the weights applied to the rasters through the Update_function.
-2.Results will be simultaneously calculated, redrawn and plotted through the plot_function into the final map frame (frame 5). This map depicts the different suitability levels of areas across the country.Darker shades of green translates as increasing suitability, while lighter shades show decreasing suitability.
+1. In the left bottom area of the GUI window (frame 4), there are adjustable sliders which control the weights used in weighting the input rasters. Adjust the weights according to your preference. Doing this automatically updates the weights applied to the rasters through the Update_function.
+2. Results will be simultaneously calculated, redrawn and plotted through the plot_function into the final map frame (frame 5). This map depicts the different suitability levels of areas across the country.Darker shades of green translates as increasing suitability, while lighter shades show decreasing suitability.
 3. After producing your desired map. Click the 'Save as text file' button on the bottom right to save the final output text file. Alternatively, you can click the 'Save as Image' button to save the final output map. These files would be found in 'output' folder within the 'data' folder. 
 NB: To have larger size of the picture, please resize the pop-up picture window as required before saving the image.
-4.To end the program, either click the 'Exit' button or just click the 'close window' button at the top right corner of the window (See screenshots in Word document for help)
+4. To end the program, either click the 'Exit' button or just click the 'close window' button at the top right corner of the window (See screenshots in Word document for help)
 
 #TESTING
 Some testing was done for the program. A unit test was done for the weighting_rasters function to check its accuracy. This code can be seen in the test.py file.
 
-Note: In case of any errors, use the debugging tool to detect the problem. ipython console is also 
-particularly helpful in doing this.
+Note: In case of any errors, use the debugging tool to detect the problem. IPython console is also particularly helpful in doing this.
 
 #FURTHER IMPROVEMENT
 One improvement that can be made to the program is to modify the update function to automatically adjust weights to cummulatively add up to 1. This is because many of MCE studies ensure weights add up to 1.
 
-Another improvement to the program can be to make it possible for users to select where to save outputs rather than the pre-defined directory within the GUI interface. 
+Another improvement to the program can be to make it possible for users to select where to save outputs rather than the pre-defined directory within the GUI interface.
+
+Unfortunately, unit testing was not done for the other functions. This can be further explored in the future.
 
 #CREDITS
 ANDY TURNER - Useful tutorials : https://agdturner.github.io/GEOG5990/home/index.html
