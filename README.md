@@ -35,6 +35,8 @@ LICENCE (License information)
 
 README.md (Readme file which contains essential information about the software).
 
+User Manual (word document with useful tips and screenshots of using the software)
+
 .gitignore
 	 
 	 		  
