@@ -61,7 +61,8 @@ Additionally, there are some useful resources in the word document.
 using csv.reader and checks the number of rows and coloums of each of them when called and fed with a filepath(read_data function).
 2.The three rasters were multiplied by different weights and summed up to produce a weighted sum list  using weighting_rasters_function.
 3.The weighted sum values were further rescaled to fall within 0 - 255 after deriving the minimum and maximum values.
-4. A GUI was created to display the results, to allow users to change the weights and save outputs using tkinter, plot and update functions .
+4. A GUI was created to display the results, to allow users to change the weights and save outputs using tkinter, plot and update functions.
+5. The program was run a series of time to test it's functionality and fix errors. This is evidenced by sample results found in the output folder. Unit testing was also done.
 
 #RUNNING THE PROGRAM
 NB: Before running the program it is imperactive to change the Graphics Backend option to Tkinter. This ensures the GUI codes work well. See word document on steps to do this.
